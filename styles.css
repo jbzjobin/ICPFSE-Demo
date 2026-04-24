@@ -218,6 +218,8 @@ ul { list-style: none; }
 
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
 
+.hamburger { display: none; }
+
 /* In a light theme, we need the nav links to be dark when scrolled, or dark on light pages */
 .navbar .logo { color: var(--color-white); transition: color 0.3s; }
 .navbar.scrolled .logo { color: var(--color-navy); }
@@ -455,24 +457,7 @@ ul { list-style: none; }
 .delay-300 { transition-delay: 0.3s; }
 .delay-400 { transition-delay: 0.4s; }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  h1 { font-size: 3.5rem; }
-  .split-section { grid-template-columns: 1fr; gap: 4rem; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-}
-
-@media (max-width: 768px) {
-  h1 { font-size: 2.8rem; } h2 { font-size: 2.2rem; }
-  .custom-cursor { display: none; }
-  body { cursor: auto; }
-  .nav-links { display: none; }
-  .hamburger { display: block; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .timeline-content { margin-left: 60px; width: calc(100% - 60px); }
-  .creative-timeline::before { left: 20px; }
-  .timeline-dot { left: 11px; }
-}
+/* Responsive styles removed to force PC view on mobile */
 
 /* FX Particles */
 .fx-particles {
@@ -604,12 +589,7 @@ ul { list-style: none; }
   line-height: 1.4;
 }
 
-@media (max-width: 768px) {
-  .hero-features {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+/* Responsive styles removed to force PC view on mobile */
 
 /* Creative Hero Badge */
 .hero-badge-creative {
@@ -671,11 +651,7 @@ ul { list-style: none; }
   100% { background-position: 0% 50%; }
 }
 
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 3.5rem;
-  }
-}
+/* Responsive styles removed to force PC view on mobile */
 
 /* Creative Vertical Cards (Values, etc.) */
 .creative-card {
