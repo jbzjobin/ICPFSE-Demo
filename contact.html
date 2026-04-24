@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | ICPF USA</title>
+    <meta name="description" content="Get in touch with ICPF USA. We'd love to hear from you.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .form-control {
+            width: 100%; padding: 1rem; margin-bottom: 1.5rem;
+            border: 1px solid var(--glass-border);
+            background: rgba(255,255,255,0.8);
+            border-radius: 8px; font-family: var(--font-body);
+            transition: all var(--transition-fast);
+        }
+        .form-control:focus {
+            outline: none; border-color: var(--color-gold);
+            box-shadow: 0 0 10px rgba(201, 168, 76, 0.2);
+        }
+        .form-label {
+            display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-navy);
+        }
+        .social-icons a {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 40px; height: 40px; border-radius: 50%;
+            background: var(--color-navy); color: var(--color-white);
+            margin-right: 0.5rem; transition: all var(--transition-fast);
+        }
+        .social-icons a:hover {
+            background: var(--color-gold); transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-fire-flame-curved"></i> ICPF USA
+            </a>
+            
+            <button class="hamburger">
+                <i class="fa-solid fa-bars" style="color: var(--color-navy);"></i>
+            </button>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="ministries.html" class="nav-link">Ministries</a>
+                <a href="events.html" class="nav-link">Events</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link active">Contact Us</a>
+                <a href="give.html" class="btn nav-give-btn">Give</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="page-header-bg" style="background: url('https://picsum.photos/id/1021/1920/600') center/cover;"></div>
+        <div class="hero-overlay"></div>
+        <div class="container" style="position: relative; z-index: 3;">
+            <h1 class="animate-slide-up delay-100" style="font-size: 4.5rem; text-transform: uppercase;">Contact Us</h1>
+            <p class="animate-slide-up delay-200" style="font-size: 1.4rem; font-weight: 300; max-width: 800px; margin: 2rem auto 0; color: rgba(255,255,255,0.9);">
+                We'd love to hear from you. Reach out with any questions or to partner with us.
+            </p>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="section-padding" style="position: relative; overflow: hidden;">
+        <div class="bg-text">CONNECT</div>
+        <div class="container split-section">
+            
+            <div class="tilt-card animate-slide-up delay-100" style="padding: 3rem;">
+                <div class="tilt-content">
+                    <h2 style="font-size: 2.5rem; color: var(--color-navy); margin-bottom: 1rem;">Get In Touch</h2>
+                    <p style="color: var(--color-text-light); margin-bottom: 3rem;">Have a question about a camp, wanting to start an Aspire club, or looking to partner with us? We'd love to hear from you.</p>
+                    
+                    <div style="margin-bottom: 2rem; display: flex; align-items: flex-start; gap: 1.5rem;">
+                        <i class="fa-solid fa-location-dot" style="color: var(--color-gold); font-size: 1.8rem; margin-top: 5px;"></i>
+                        <div>
+                            <h4 style="color: var(--color-navy); font-family: var(--font-body); font-size: 1.2rem;">Headquarters</h4>
+                            <p style="color: var(--color-text-light);">123 Faith Lane<br>Dallas, TX 75001</p>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 2rem; display: flex; align-items: flex-start; gap: 1.5rem;">
+                        <i class="fa-solid fa-phone" style="color: var(--color-gold); font-size: 1.8rem; margin-top: 5px;"></i>
+                        <div>
+                            <h4 style="color: var(--color-navy); font-family: var(--font-body); font-size: 1.2rem;">Phone</h4>
+                            <p style="color: var(--color-text-light);">+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 2rem; display: flex; align-items: flex-start; gap: 1.5rem;">
+                        <i class="fa-solid fa-envelope" style="color: var(--color-gold); font-size: 1.8rem; margin-top: 5px;"></i>
+                        <div>
+                            <h4 style="color: var(--color-navy); font-family: var(--font-body); font-size: 1.2rem;">Email</h4>
+                            <p style="color: var(--color-text-light);">info@icpfusa.org</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-icons" style="margin-top: 3rem;">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tilt-card animate-slide-up delay-200" style="padding: 3rem;">
+                <form action="#" method="POST" class="tilt-content">
+                    <h3 style="font-size: 2rem; color: var(--color-navy); margin-bottom: 2rem;">Send a Message</h3>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Subject</label>
+                        <select class="form-control">
+                            <option>General Inquiry</option>
+                            <option>Camps & Events</option>
+                            <option>Start an Aspire Club</option>
+                            <option>Donations & Support</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-control" rows="5" placeholder="How can we help you?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--color-white);">
+                        <i class="fa-solid fa-fire-flame-curved"></i> ICPF USA
+                    </a>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">Awakening a generation to live boldly for Christ through fellowship, leadership, and community.</p>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Ministries</h4>
+                    <ul class="footer-links">
+                        <li><a href="ministries.html#awake">Awake</a></li>
+                        <li><a href="ministries.html#aspire">Aspire</a></li>
+                        <li><a href="ministries.html#connect">Connect</a></li>
+                        <li><a href="ministries.html#medical">Medical Mission</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="give.html">Donate</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5);">
+                <p>&copy; 2026 ICPF USA. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
