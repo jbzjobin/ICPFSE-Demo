@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1300">
+    <title>Registration | SE Awake Camp 2026</title>
+    <meta name="description" content="Register for SE Awake Camp 2026. Join us for a life-changing experience.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .registration-form-container {
+            max-width: 900px;
+            margin: -100px auto 5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .reg-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 4rem;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .form-section {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .form-section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--color-navy);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--color-text);
+            font-size: 0.95rem;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: all var(--transition-fast);
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--color-gold);
+            box-shadow: 0 0 15px rgba(201, 168, 76, 0.15);
+            background: white;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-fire-flame-curved"></i> ICPFSE 2026
+            </a>
+
+            <button class="hamburger">
+                <i class="fa-solid fa-bars" style="color: var(--color-navy);"></i>
+            </button>
+
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <a href="about.html" class="nav-link">About Us <i class="fa-solid fa-chevron-down"
+                            style="font-size: 0.7rem; margin-left: 5px; vertical-align: middle;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="leadership.html#leadership-team" class="dropdown-item">National Leadership</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="awake-camp.html" class="nav-link active">SE Awake Camp <i class="fa-solid fa-chevron-down"
+                            style="font-size: 0.7rem; margin-left: 5px; vertical-align: middle;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="camp-team.html" class="dropdown-item">Camp Team</a>
+                        <a href="registration.html" class="dropdown-item">Registration</a>
+                        <a href="speakers.html" class="dropdown-item">Speakers</a>
+                        <a href="partner-churches.html" class="dropdown-item">Partner Churches</a>
+                    </div>
+                </div>
+                <a href="events.html" class="nav-link">Events</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="give.html" class="nav-link">Give</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="page-header-bg" style="background: url('https://picsum.photos/id/1067/1920/800') center/cover;"></div>
+        <div class="hero-overlay"></div>
+        <div class="container" style="position: relative; z-index: 3; padding-bottom: 10rem;">
+            <div class="hero-badge-creative animate-slide-up">
+                <i class="fa-solid fa-pen-to-square" style="color: var(--color-gold);"></i> <span>Register Now</span>
+            </div>
+            <h1 class="animate-slide-up delay-100" style="font-size: 4.5rem; text-transform: uppercase;">Camp Registration</h1>
+            <p class="animate-slide-up delay-200" style="font-size: 1.4rem; font-weight: 300; max-width: 800px; margin: 2rem auto 0; color: rgba(255,255,255,0.9);">
+                Secure your spot for SE Awake Camp 2026. A journey of faith, fellowship, and purpose awaits.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <div class="container">
+        <div class="registration-form-container">
+            <form class="reg-card animate-slide-up delay-300">
+                
+                <!-- Personal Info -->
+                <div class="form-section">
+                    <h3 class="section-title"><i class="fa-solid fa-user"></i> Participant Information</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>First Name *</label>
+                            <input type="text" placeholder="John" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name *</label>
+                            <input type="text" placeholder="Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Gender *</label>
+                            <select required>
+                                <option value="" disabled selected>Select Gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Age *</label>
+                            <input type="number" placeholder="18" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <input type="tel" placeholder="(555) 000-0000" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education & Church -->
+                <div class="form-section">
+                    <h3 class="section-title"><i class="fa-solid fa-church"></i> Education & Church</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Grade / College Level *</label>
+                            <select required>
+                                <option value="" disabled selected>Select Level</option>
+                                <option>9th Grade</option>
+                                <option>10th Grade</option>
+                                <option>11th Grade</option>
+                                <option>12th Grade</option>
+                                <option>College Freshman</option>
+                                <option>College Sophomore</option>
+                                <option>College Junior</option>
+                                <option>College Senior</option>
+                                <option>Post-Grad</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>School / University Name</label>
+                            <input type="text" placeholder="State University">
+                        </div>
+                        <div class="form-group">
+                            <label>Home Church Name *</label>
+                            <input type="text" placeholder="Grace Fellowship" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Pastor's Name</label>
+                            <input type="text" placeholder="Pr. David Smith">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Health & Dietary -->
+                <div class="form-section">
+                    <h3 class="section-title"><i class="fa-solid fa-heart-pulse"></i> Health & Dietary Information</h3>
+                    <div class="form-group full-width">
+                        <label>Allergies or Medical Conditions (If any)</label>
+                        <textarea rows="3" placeholder="Please list any allergies or medical requirements..."></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Dietary Restrictions</label>
+                        <textarea rows="2" placeholder="Vegetarian, Nut-free, etc..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Emergency Contact -->
+                <div class="form-section">
+                    <h3 class="section-title"><i class="fa-solid fa-phone-flip"></i> Emergency Contact</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Contact Name *</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Relationship *</label>
+                            <input type="text" placeholder="Parent/Guardian" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Emergency Phone *</label>
+                            <input type="tel" required>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn submit-btn">Complete Registration</button>
+                <p style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem; color: var(--color-text-light);">
+                    By submitting, you agree to our <a href="#" style="color: var(--color-gold);">Terms & Conditions</a> and <a href="#" style="color: var(--color-gold);">Liability Waiver</a>.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--color-white);">
+                        <i class="fa-solid fa-fire-flame-curved"></i> ICPFSE 2026
+                    </a>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">Awakening a generation to live boldly for Christ through fellowship, leadership, and community.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="leadership.html#leadership-team">Leadership</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">SE Awake Camp</h4>
+                    <ul class="footer-links">
+                        <li><a href="awake-camp.html#awake">Awake 2026</a></li>
+                        <li><a href="camp-team.html">Camp Team</a></li>
+                        <li><a href="registration.html">Register</a></li>
+                        <li><a href="speakers.html">Speakers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="give.html">Partner with Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5);">
+                <p>&copy; 2026 ICPFSE 2026. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

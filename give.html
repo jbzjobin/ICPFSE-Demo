@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1300">
-    <title>Give | ICPF USA</title>
-    <meta name="description" content="Support the ministry of ICPF USA through your donations.">
-    
+    <title>Give | ICPFSE 2026</title>
+    <meta name="description" content="Support the ministry of ICPFSE 2026 through your donations.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <link rel="stylesheet" href="styles.css">
-    
+
     <style>
         .donation-box {
             background: var(--glass-bg);
@@ -28,16 +31,18 @@
             position: relative;
             z-index: 10;
         }
+
         .amount-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
             margin-bottom: 1.5rem;
         }
+
         .amount-btn {
             padding: 1rem;
             border: 1px solid var(--glass-border);
-            background: rgba(255,255,255,0.8);
+            background: rgba(255, 255, 255, 0.8);
             border-radius: 8px;
             font-weight: 600;
             color: var(--color-navy);
@@ -45,24 +50,28 @@
             transition: all var(--transition-fast);
             text-align: center;
         }
-        .amount-btn:hover, .amount-btn.active {
+
+        .amount-btn:hover,
+        .amount-btn.active {
             border-color: var(--color-gold);
             background: rgba(201, 168, 76, 0.1);
             color: var(--color-gold);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(201, 168, 76, 0.2);
         }
+
         .custom-amount {
             width: 100%;
             padding: 1rem;
             border: 1px solid var(--glass-border);
-            background: rgba(255,255,255,0.8);
+            background: rgba(255, 255, 255, 0.8);
             border-radius: 8px;
             margin-bottom: 2rem;
             font-family: var(--font-body);
             font-size: 1rem;
             transition: all var(--transition-fast);
         }
+
         .custom-amount:focus {
             outline: none;
             border-color: var(--color-gold);
@@ -70,23 +79,39 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <i class="fa-solid fa-fire-flame-curved"></i> ICPF USA
+                <i class="fa-solid fa-fire-flame-curved"></i> ICPFSE 2026
             </a>
-            
+
             <button class="hamburger">
                 <i class="fa-solid fa-bars" style="color: var(--color-navy);"></i>
             </button>
-            
+
             <div class="nav-links">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About Us</a>
-                <a href="ministries.html" class="nav-link">Ministries</a>
+                <div class="dropdown">
+                    <a href="about.html" class="nav-link">About Us <i class="fa-solid fa-chevron-down"
+                            style="font-size: 0.7rem; margin-left: 5px; vertical-align: middle;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="leadership.html#leadership-team" class="dropdown-item">National Leadership</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="awake-camp.html" class="nav-link">SE Awake Camp <i class="fa-solid fa-chevron-down"
+                            style="font-size: 0.7rem; margin-left: 5px; vertical-align: middle;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="camp-team.html" class="dropdown-item">Camp Team</a>
+                        <a href="registration.html" class="dropdown-item">Registration</a>
+                        <a href="speakers.html" class="dropdown-item">Speakers</a>
+                        <a href="partner-churches.html" class="dropdown-item">Partner Churches</a>
+                    </div>
+                </div>
                 <a href="events.html" class="nav-link">Events</a>
                 <a href="blog.html" class="nav-link">Blog</a>
                 <a href="contact.html" class="nav-link">Contact Us</a>
@@ -97,12 +122,16 @@
 
     <!-- Page Header -->
     <header class="page-header">
-        <div class="page-header-bg" style="background: url('https://picsum.photos/id/1022/1920/800') center/cover;"></div>
+        <div class="page-header-bg" style="background: url('https://picsum.photos/id/1022/1920/800') center/cover;">
+        </div>
         <div class="hero-overlay"></div>
         <div class="container" style="position: relative; z-index: 3; padding-bottom: 10rem;">
-            <h1 class="animate-slide-up delay-100" style="font-size: 4.5rem; text-transform: uppercase;">Partner With Us</h1>
-            <p class="animate-slide-up delay-200" style="font-size: 1.4rem; font-weight: 300; max-width: 800px; margin: 2rem auto 0; color: rgba(255,255,255,0.9);">
-                Your generosity fuels the movement, allowing us to reach more students, host more camps, and impact more lives for Christ.
+            <h1 class="animate-slide-up delay-100" style="font-size: 4.5rem; text-transform: uppercase;">Partner With Us
+            </h1>
+            <p class="animate-slide-up delay-200"
+                style="font-size: 1.4rem; font-weight: 300; max-width: 800px; margin: 2rem auto 0; color: rgba(255,255,255,0.9);">
+                Your generosity fuels the movement, allowing us to reach more students, host more camps, and impact more
+                lives for Christ.
             </p>
         </div>
     </header>
@@ -112,13 +141,14 @@
         <div class="bg-text">SUPPORT</div>
         <div class="container">
             <div class="donation-box animate-slide-up delay-300">
-                <h3 style="text-align: center; color: var(--color-navy); font-size: 2rem; margin-bottom: 2rem;">Make a Secure Donation</h3>
-                
+                <h3 style="text-align: center; color: var(--color-navy); font-size: 2rem; margin-bottom: 2rem;">Make a
+                    Secure Donation</h3>
+
                 <div style="display: flex; gap: 1rem; margin-bottom: 2.5rem;">
                     <button class="btn" style="flex: 1; text-align: center;">One-Time</button>
                     <button class="btn-outline btn" style="flex: 1; text-align: center;">Monthly</button>
                 </div>
-                
+
                 <div class="amount-grid">
                     <div class="amount-btn">$50</div>
                     <div class="amount-btn active">$100</div>
@@ -127,31 +157,41 @@
                     <div class="amount-btn">$1,000</div>
                     <div class="amount-btn">Other</div>
                 </div>
-                
+
                 <input type="text" class="custom-amount" placeholder="Enter custom amount ($)" style="display: none;">
-                
+
                 <button class="btn" style="width: 100%; font-size: 1.2rem; padding: 1.2rem;">Donate Now</button>
-                
+
                 <p style="text-align: center; font-size: 0.9rem; color: var(--color-text-light); margin-top: 2rem;">
-                    <i class="fa-solid fa-lock" style="color: var(--color-gold);"></i> Secure SSL Transaction. ICPF USA is a 501(c)(3) non-profit organization. All donations are tax-deductible.
+                    <i class="fa-solid fa-lock" style="color: var(--color-gold);"></i> Secure SSL Transaction. ICPFSE 2026
+                    is a 501(c)(3) non-profit organization. All donations are tax-deductible.
                 </p>
             </div>
-            
+
             <div class="creative-cards-grid animate-fade-in delay-400" style="margin-top: 4rem;">
                 <div class="tilt-card text-center" style="padding: 2.5rem;">
-                    <i class="fa-solid fa-envelope-open-text tilt-content" style="font-size: 3rem; color: var(--color-gold); margin-bottom: 1.5rem; display: block;"></i>
-                    <h3 class="tilt-content" style="font-size: 1.5rem; color: var(--color-navy); margin-bottom: 1rem;">Give by Mail</h3>
-                    <p class="tilt-content" style="color: var(--color-text-light); font-size: 1rem;">Make checks payable to "ICPF USA" and mail to:<br>123 Faith Lane, Dallas, TX 75001</p>
+                    <i class="fa-solid fa-envelope-open-text tilt-content"
+                        style="font-size: 3rem; color: var(--color-gold); margin-bottom: 1.5rem; display: block;"></i>
+                    <h3 class="tilt-content" style="font-size: 1.5rem; color: var(--color-navy); margin-bottom: 1rem;">
+                        Give by Mail</h3>
+                    <p class="tilt-content" style="color: var(--color-text-light); font-size: 1rem;">Make checks payable
+                        to "ICPFSE 2026" and mail to:<br>123 Faith Lane, Dallas, TX 75001</p>
                 </div>
                 <div class="tilt-card text-center" style="padding: 2.5rem;">
-                    <i class="fa-solid fa-building-columns tilt-content" style="font-size: 3rem; color: var(--color-gold); margin-bottom: 1.5rem; display: block;"></i>
-                    <h3 class="tilt-content" style="font-size: 1.5rem; color: var(--color-navy); margin-bottom: 1rem;">Bank Transfer</h3>
-                    <p class="tilt-content" style="color: var(--color-text-light); font-size: 1rem;">Contact us at info@icpfusa.org for ACH or wire transfer instructions.</p>
+                    <i class="fa-solid fa-building-columns tilt-content"
+                        style="font-size: 3rem; color: var(--color-gold); margin-bottom: 1.5rem; display: block;"></i>
+                    <h3 class="tilt-content" style="font-size: 1.5rem; color: var(--color-navy); margin-bottom: 1rem;">
+                        Bank Transfer</h3>
+                    <p class="tilt-content" style="color: var(--color-text-light); font-size: 1rem;">Contact us at
+                        info@icpfusa.org for ACH or wire transfer instructions.</p>
                 </div>
                 <div class="tilt-card text-center" style="padding: 2.5rem;">
-                    <i class="fa-solid fa-hand-holding-heart tilt-content" style="font-size: 3rem; color: var(--color-gold); margin-bottom: 1.5rem; display: block;"></i>
-                    <h3 class="tilt-content" style="font-size: 1.5rem; color: var(--color-navy); margin-bottom: 1rem;">Legacy Giving</h3>
-                    <p class="tilt-content" style="color: var(--color-text-light); font-size: 1rem;">Include ICPF USA in your will or estate planning to leave a lasting impact.</p>
+                    <i class="fa-solid fa-hand-holding-heart tilt-content"
+                        style="font-size: 3rem; color: var(--color-gold); margin-bottom: 1.5rem; display: block;"></i>
+                    <h3 class="tilt-content" style="font-size: 1.5rem; color: var(--color-navy); margin-bottom: 1rem;">
+                        Legacy Giving</h3>
+                    <p class="tilt-content" style="color: var(--color-text-light); font-size: 1rem;">Include ICPFSE 2026 in
+                        your will or estate planning to leave a lasting impact.</p>
                 </div>
             </div>
         </div>
@@ -162,12 +202,14 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.html" class="logo" style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--color-white);">
-                        <i class="fa-solid fa-fire-flame-curved"></i> ICPF USA
+                    <a href="index.html" class="logo"
+                        style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--color-white);">
+                        <i class="fa-solid fa-fire-flame-curved"></i> ICPFSE 2026
                     </a>
-                    <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">Awakening a generation to live boldly for Christ through fellowship, leadership, and community.</p>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">Awakening a generation to live boldly for
+                        Christ through fellowship, leadership, and community.</p>
                 </div>
-                
+
                 <div>
                     <h4 class="footer-title">Quick Links</h4>
                     <ul class="footer-links">
@@ -177,17 +219,17 @@
                         <li><a href="blog.html">Blog</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="footer-title">Ministries</h4>
                     <ul class="footer-links">
-                        <li><a href="ministries.html#awake">Awake</a></li>
-                        <li><a href="ministries.html#aspire">Aspire</a></li>
-                        <li><a href="ministries.html#connect">Connect</a></li>
-                        <li><a href="ministries.html#medical">Medical Mission</a></li>
+                        <li><a href="awake-camp.html#awake">Awake</a></li>
+                        <li><a href="awake-camp.html#aspire">Aspire</a></li>
+                        <li><a href="awake-camp.html#connect">Connect</a></li>
+                        <li><a href="awake-camp.html#medical">Medical Mission</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="footer-title">Support</h4>
                     <ul class="footer-links">
@@ -196,9 +238,10 @@
                     </ul>
                 </div>
             </div>
-            
-            <div style="text-align: center; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5);">
-                <p>&copy; 2026 ICPF USA. All Rights Reserved.</p>
+
+            <div
+                style="text-align: center; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5);">
+                <p>&copy; 2026 ICPFSE 2026. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -206,11 +249,11 @@
     <script src="script.js"></script>
     <script>
         document.querySelectorAll('.amount-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
+            btn.addEventListener('click', function () {
                 document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
-                
-                if(this.innerText === 'Other') {
+
+                if (this.innerText === 'Other') {
                     document.querySelector('.custom-amount').style.display = 'block';
                     document.querySelector('.custom-amount').focus();
                 } else {
@@ -220,4 +263,5 @@
         });
     </script>
 </body>
+
 </html>

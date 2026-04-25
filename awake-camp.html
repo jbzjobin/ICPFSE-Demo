@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1300">
+    <title>SE Awake Camp | ICPFSE 2026</title>
+    <meta name="description"
+        content="Join SE Awake Camp 2026 - An unshakable journey of faith, fellowship, and purpose for the next generation.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 5rem;
+        }
+
+        .feature-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            padding: 3rem;
+            border-radius: 24px;
+            text-align: center;
+            transition: all var(--transition-medium);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            border-color: var(--color-gold);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .feature-icon {
+            font-size: 3.5rem;
+            color: var(--color-gold);
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .camp-stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 4rem;
+            background: var(--color-navy);
+            border-radius: 30px;
+            color: white;
+            margin-top: 6rem;
+        }
+
+        .stat-box h3 {
+            font-size: 3rem;
+            color: var(--color-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .theme-section {
+            padding: 8rem 0;
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)),
+                url('secamp.jpg') center/cover fixed;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-fire-flame-curved"></i> ICPFSE 2026
+            </a>
+
+            <button class="hamburger">
+                <i class="fa-solid fa-bars" style="color: var(--color-navy);"></i>
+            </button>
+
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <a href="about.html" class="nav-link">About Us <i class="fa-solid fa-chevron-down"
+                            style="font-size: 0.7rem; margin-left: 5px; vertical-align: middle;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="leadership.html#leadership-team" class="dropdown-item">National Leadership</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="awake-camp.html" class="nav-link active">SE Awake Camp <i class="fa-solid fa-chevron-down"
+                            style="font-size: 0.7rem; margin-left: 5px; vertical-align: middle;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="camp-team.html" class="dropdown-item">Camp Team</a>
+                        <a href="registration.html" class="dropdown-item">Registration</a>
+                        <a href="speakers.html" class="dropdown-item">Speakers</a>
+                        <a href="partner-churches.html" class="dropdown-item">Partner Churches</a>
+                    </div>
+                </div>
+                <a href="events.html" class="nav-link">Events</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="give.html" class="nav-link">Give</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="page-header-bg" style="background: url('secamp.jpg') center/cover;">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container" style="position: relative; z-index: 3;">
+            <div class="hero-badge-creative animate-slide-up">
+                <i class="fa-solid fa-mountain-sun" style="color: var(--color-gold);"></i> <span>The Main Event</span>
+            </div>
+            <h1 class="animate-slide-up delay-100"
+                style="font-size: 4.5rem; text-transform: uppercase; color: #ffffff;">
+                SE Awake Camp 2026
+            </h1>
+            <p class="animate-slide-up delay-200"
+                style="font-size: 1.4rem; font-weight: 300; max-width: 800px; margin: 2rem auto 0; color: rgba(255,255,255,0.9);">
+                Igniting faith and building unshakable foundations for the next generation of Christian leaders.
+            </p>
+            <div class="animate-slide-up delay-300" style="margin-top: 3rem;">
+                <a href="registration.html" class="btn">Register Today</a>
+                <a href="#overview" class="btn-outline btn"
+                    style="margin-left: 1.5rem; color: white; border-color: white;">Learn More</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overview Section -->
+    <section id="overview" class="section-padding">
+        <div class="container">
+            <div class="text-center animate-slide-up">
+                <h2 style="font-size: 3rem; color: var(--color-navy); margin-bottom: 2rem;">Experience the Awakening
+                </h2>
+                <p
+                    style="font-size: 1.2rem; max-width: 900px; margin: 0 auto; line-height: 1.8; color: var(--color-text-light);">
+                    SE Awake Camp is more than just a retreat—it's a spiritual reset. In a world full of distractions,
+                    we provide a sacred space for students to unplug, connect with God, and find their true identity in
+                    Christ.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card animate-slide-up delay-100">
+                    <i class="fa-solid fa-fire-burner feature-icon"></i>
+                    <h3 style="font-size: 1.5rem; color: var(--color-navy); margin-bottom: 1rem;">Powerful Worship</h3>
+                    <p style="color: var(--color-text-light);">Immersive praise and worship sessions that lead you
+                        directly into the presence of God.</p>
+                </div>
+                <div class="feature-card animate-slide-up delay-200">
+                    <i class="fa-solid fa-book-open-reader feature-icon"></i>
+                    <h3 style="font-size: 1.5rem; color: var(--color-navy); margin-bottom: 1rem;">Biblical Teaching</h3>
+                    <p style="color: var(--color-text-light);">Practical, scriptural insights tailored for the
+                        challenges students face today.</p>
+                </div>
+                <div class="feature-card animate-slide-up delay-300">
+                    <i class="fa-solid fa-people-group feature-icon"></i>
+                    <h3 style="font-size: 1.5rem; color: var(--color-navy); margin-bottom: 1rem;">Lasting Community</h3>
+                    <p style="color: var(--color-text-light);">Small groups and fellowship activities that build
+                        friendships for a lifetime.</p>
+                </div>
+            </div>
+
+            <div class="camp-stats animate-fade-in delay-400">
+                <div class="stat-box text-center">
+                    <h3>3</h3>
+                    <p>Powerful Days</p>
+                </div>
+                <div class="stat-box text-center">
+                    <h3>500+</h3>
+                    <p>Attendees</p>
+                </div>
+                <div class="stat-box text-center">
+                    <h3>10+</h3>
+                    <p>Workshops</p>
+                </div>
+                <div class="stat-box text-center">
+                    <h3>1</h3>
+                    <p>Unshakable Goal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theme Focus -->
+    <section class="theme-section">
+        <div class="container">
+            <div class="hero-badge-creative"
+                style="margin: 0 auto 2rem; background: rgba(255,255,255,0.1); border-color: var(--color-gold);">
+                <span style="color: var(--color-gold);">2026 THEME</span>
+            </div>
+            <h2
+                style="font-size: 5rem; margin-bottom: 2rem; font-family: var(--font-heading); background: linear-gradient(to bottom, #ffffff, var(--color-gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; letter-spacing: 4px;">
+                UNSHAKABLE</h2>
+            <p
+                style="font-size: 1.6rem; max-width: 800px; margin: 0 auto; line-height: 1.8; font-weight: 300; font-style: italic; color: white;">
+                "Therefore, since we are receiving a kingdom that cannot be shaken, let us be thankful, and so worship
+                God acceptably with reverence and awe..."
+            </p>
+            <p style="margin-top: 2rem; font-weight: 700; color: var(--color-gold); letter-spacing: 2px;">HEBREWS
+                12:28-29</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding text-center">
+        <div class="container">
+            <h2 style="font-size: 3rem; color: var(--color-navy); margin-bottom: 2rem;">Will You Be There?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 3rem; color: var(--color-text-light);">Registration is now open
+                for students and volunteers. Don't miss out on this life-changing weekend.</p>
+            <div style="display: flex; justify-content: center; gap: 1.5rem;">
+                <a href="registration.html" class="btn" style="padding: 1.2rem 3rem;">Register Now</a>
+                <a href="contact.html" class="btn-outline btn" style="padding: 1.2rem 3rem;">Ask a Question</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo"
+                        style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--color-white);">
+                        <i class="fa-solid fa-fire-flame-curved"></i> ICPFSE 2026
+                    </a>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">Awakening a generation to live boldly for
+                        Christ through fellowship, leadership, and community.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="leadership.html#leadership-team">Leadership</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">SE Awake Camp</h4>
+                    <ul class="footer-links">
+                        <li><a href="awake-camp.html#awake">Awake 2026</a></li>
+                        <li><a href="camp-team.html">Camp Team</a></li>
+                        <li><a href="registration.html">Register</a></li>
+                        <li><a href="speakers.html">Speakers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="give.html">Partner with Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="text-align: center; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5);">
+                <p>&copy; 2026 ICPFSE 2026. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
