@@ -129,7 +129,7 @@ ul { list-style: none; }
 .text-white { color: var(--color-white) !important; }
 .text-navy { color: var(--color-navy) !important; }
 
-.section-padding { padding: 8rem 0; position: relative; }
+.section-padding { padding: 8rem 0; position: relative; overflow: hidden; }
 
 /* Subdued Background Text Watermark (Fixed alignment) */
 .bg-text {
@@ -354,10 +354,9 @@ ul { list-style: none; }
 
 
 /* 3D Glass Cards - Light Theme */
-.tilt-card {
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
+/* 3D Glass Cards - Fallback for older browsers */
+.tilt-card, .feature-card, .reg-card {
+  background: rgba(255, 255, 255, 0.95);
   border: 1px solid var(--glass-border);
   border-radius: 20px;
   padding: 3rem;
@@ -367,6 +366,19 @@ ul { list-style: none; }
   overflow: hidden;
   transform-style: preserve-3d;
 }
+
+@supports (backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px)) {
+  .tilt-card, .feature-card, .reg-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+  }
+}
+
+.reg-card { border-radius: 24px; padding: 4rem; }
+.feature-card { border-radius: 24px; text-align: center; transition: all var(--transition-medium); padding: 3rem; transform-style: flat; }
+.feature-card:hover { transform: translateY(-15px) scale(1.02); border-color: var(--color-gold); box-shadow: var(--shadow-xl); }
+.feature-icon { font-size: 3.5rem; color: var(--color-gold); margin-bottom: 2rem; display: block; }
 
 .tilt-card::after {
   content: '';
@@ -494,6 +506,27 @@ ul { list-style: none; }
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2.5rem;
+}
+
+/* Base Layout Grids */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.feature-grid, .partner-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+.feature-grid { margin-top: 5rem; }
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
 }
 
 /* Timeline / History */
@@ -904,5 +937,10 @@ ul { list-style: none; }
   
   .registration-form-container {
       margin: 0 auto 3rem;
+  }
+  
+  /* Fix iOS Safari background-attachment: fixed bug */
+  .theme-section, .page-header-bg, .hero-bg {
+      background-attachment: scroll !important;
   }
 }
