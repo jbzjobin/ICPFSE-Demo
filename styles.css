@@ -820,23 +820,24 @@ ul { list-style: none; }
 @media (max-width: 991px) {
   /* Navigation */
   .hamburger {
-    display: block;
+    display: block !important;
     background: none;
     border: none;
-    font-size: 1.8rem;
+    font-size: 2rem;
     cursor: pointer;
     z-index: 1001;
   }
   .nav-links {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: -350px;
     width: 280px;
     height: 100vh;
     background: var(--color-white);
     flex-direction: column;
+    justify-content: flex-start;
     padding-top: 100px;
-    transition: 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     box-shadow: -5px 0 15px rgba(0,0,0,0.1);
     z-index: 1000;
   }
@@ -846,7 +847,9 @@ ul { list-style: none; }
   .navbar .nav-link {
     color: var(--color-navy) !important;
     font-size: 1.1rem;
-    padding: 10px 20px;
+    padding: 15px 20px;
+    width: 100%;
+    text-align: left;
   }
   .dropdown-menu {
     position: static;
@@ -868,11 +871,15 @@ ul { list-style: none; }
 }
 
 @media (max-width: 768px) {
-  h1, .hero-title, .page-header h1 { font-size: 2.8rem; }
-  h2 { font-size: 2.2rem; }
+  h1, .hero-title, .page-header h1 { 
+    font-size: 10vw !important; 
+    word-wrap: break-word; 
+    line-height: 1.2;
+  }
+  h2 { font-size: 2rem; }
   
-  .feature-grid, .partner-grid, .camp-stats {
-    grid-template-columns: 1fr;
+  .feature-grid, .partner-grid, .camp-stats, .stats-grid {
+    grid-template-columns: 1fr !important;
     flex-direction: column;
   }
   
