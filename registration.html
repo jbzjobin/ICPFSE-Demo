@@ -24,6 +24,38 @@
             z-index: 10;
         }
 
+        .reg-header-container {
+            position: relative; 
+            z-index: 3; 
+            padding-bottom: 10rem;
+        }
+
+        @media (max-width: 768px) {
+            .registration-form-container {
+                margin: 0 auto 3rem;
+            }
+            .page-header {
+                min-height: auto !important;
+                padding-top: 8rem !important;
+            }
+            .reg-header-container {
+                padding-bottom: 2rem;
+            }
+            .page-header-bg, .hero-overlay {
+                display: none !important;
+            }
+            .page-header h1, .page-header p {
+                color: var(--color-navy) !important;
+            }
+            .hero-badge-creative {
+                border-color: rgba(10, 28, 58, 0.2) !important;
+                background: rgba(10, 28, 58, 0.05) !important;
+            }
+            .hero-badge-creative span {
+                color: var(--color-navy) !important;
+            }
+        }
+
 
 
         .form-section {
@@ -140,11 +172,11 @@
         <div class="page-header-bg" style="background: url('https://picsum.photos/id/1067/1920/800') center/cover;">
         </div>
         <div class="hero-overlay"></div>
-        <div class="container" style="position: relative; z-index: 3; padding-bottom: 10rem;">
+        <div class="container reg-header-container">
             <div class="hero-badge-creative animate-slide-up">
                 <i class="fa-solid fa-pen-to-square" style="color: var(--color-gold);"></i> <span>Register Now</span>
             </div>
-            <h1 class="animate-slide-up delay-100" style="font-size: 4.5rem; text-transform: uppercase;">Camp
+            <h1 class="animate-slide-up delay-100" style="text-transform: uppercase;">Camp
                 Registration</h1>
             <p class="animate-slide-up delay-200"
                 style="font-size: 1.4rem; font-weight: 300; max-width: 800px; margin: 2rem auto 0; color: rgba(255,255,255,0.9);">
