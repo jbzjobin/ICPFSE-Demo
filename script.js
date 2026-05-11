@@ -58,8 +58,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     if (hamburger) {
+        let scrollPos = 0;
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+            if (navLinks.classList.contains('active')) {
+                // Save scroll position and lock body
+                scrollPos = window.scrollY;
+                document.body.classList.add('menu-open');
+                document.body.style.top = `-${scrollPos}px`;
+            } else {
+                // Unlock body and restore scroll position
+                document.body.classList.remove('menu-open');
+                document.body.style.top = '';
+                window.scrollTo(0, scrollPos);
+            }
         });
     }
 
