@@ -77,6 +77,24 @@
             border-color: var(--color-gold);
             box-shadow: 0 0 10px rgba(201, 168, 76, 0.2);
         }
+
+        .page-header h1 {
+            color: var(--color-white) !important;
+        }
+
+        @media (max-width: 768px) {
+
+            .page-header-bg,
+            .hero-overlay {
+                display: block !important;
+                height: 100% !important;
+            }
+
+            .page-header h1,
+            .page-header p {
+                color: var(--color-white) !important;
+            }
+        }
     </style>
 </head>
 
@@ -122,7 +140,7 @@
 
     <!-- Page Header -->
     <header class="page-header">
-        <div class="page-header-bg" style="background: url('https://picsum.photos/id/1022/1920/800') center/cover;">
+        <div class="page-header-bg" style="background: url('give.jpg') center/cover;">
         </div>
         <div class="hero-overlay"></div>
         <div class="container" style="position: relative; z-index: 3; padding-bottom: 10rem;">
@@ -163,7 +181,8 @@
                 <button class="btn" style="width: 100%; font-size: 1.2rem; padding: 1.2rem;">Donate Now</button>
 
                 <p style="text-align: center; font-size: 0.9rem; color: var(--color-text-light); margin-top: 2rem;">
-                    <i class="fa-solid fa-lock" style="color: var(--color-gold);"></i> Secure SSL Transaction. ICPFSE 2026
+                    <i class="fa-solid fa-lock" style="color: var(--color-gold);"></i> Secure SSL Transaction. ICPFSE
+                    2026
                     is a 501(c)(3) non-profit organization. All donations are tax-deductible.
                 </p>
             </div>
@@ -190,7 +209,8 @@
                         style="font-size: 3rem; color: var(--color-gold); margin-bottom: 1.5rem; display: block;"></i>
                     <h3 class="tilt-content" style="font-size: 1.5rem; color: var(--color-navy); margin-bottom: 1rem;">
                         Legacy Giving</h3>
-                    <p class="tilt-content" style="color: var(--color-text-light); font-size: 1rem;">Include ICPFSE 2026 in
+                    <p class="tilt-content" style="color: var(--color-text-light); font-size: 1rem;">Include ICPFSE 2026
+                        in
                         your will or estate planning to leave a lasting impact.</p>
                 </div>
             </div>

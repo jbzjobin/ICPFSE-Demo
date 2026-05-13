@@ -1,45 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | ICPFSE 2026</title>
     <meta name="description" content="Get in touch with ICPFSE 2026. We'd love to hear from you.">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <link rel="stylesheet" href="styles.css">
 
     <style>
         .form-control {
-            width: 100%; padding: 1rem; margin-bottom: 1.5rem;
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
             border: 1px solid var(--glass-border);
-            background: rgba(255,255,255,0.8);
-            border-radius: 8px; font-family: var(--font-body);
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            font-family: var(--font-body);
             transition: all var(--transition-fast);
         }
+
         .form-control:focus {
-            outline: none; border-color: var(--color-gold);
+            outline: none;
+            border-color: var(--color-gold);
             box-shadow: 0 0 10px rgba(201, 168, 76, 0.2);
         }
+
         .form-label {
-            display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-navy);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--color-navy);
         }
+
         .social-icons a {
-            display: inline-flex; align-items: center; justify-content: center;
-            width: 40px; height: 40px; border-radius: 50%;
-            background: var(--color-navy); color: var(--color-white);
-            margin-right: 0.5rem; transition: all var(--transition-fast);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--color-navy);
+            color: var(--color-white);
+            margin-right: 0.5rem;
+            transition: all var(--transition-fast);
         }
+
         .social-icons a:hover {
-            background: var(--color-gold); transform: translateY(-3px);
+            background: var(--color-gold);
+            transform: translateY(-3px);
+        }
+
+        .page-header h1 {
+            color: var(--color-white) !important;
+        }
+
+        @media (max-width: 768px) {
+
+            .page-header-bg,
+            .hero-overlay {
+                display: block !important;
+                height: 100% !important;
+            }
+
+            .page-header h1,
+            .page-header p {
+                color: var(--color-white) !important;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- Navigation -->
@@ -48,11 +88,11 @@
             <a href="index.html" class="logo">
                 <i class="fa-solid fa-fire-flame-curved"></i> ICPFSE 2026
             </a>
-            
+
             <button class="hamburger">
                 <i class="fa-solid fa-bars" style="color: var(--color-navy);"></i>
             </button>
-            
+
             <div class="nav-links">
                 <a href="index.html" class="nav-link">Home</a>
                 <div class="dropdown">
@@ -82,11 +122,12 @@
 
     <!-- Page Header -->
     <header class="page-header">
-        <div class="page-header-bg" style="background: url('https://picsum.photos/id/1021/1920/600') center/cover;"></div>
+        <div class="page-header-bg" style="background: url('Cont.jpg') center/cover;"></div>
         <div class="hero-overlay"></div>
         <div class="container" style="position: relative; z-index: 3;">
             <h1 class="animate-slide-up delay-100" style="font-size: 4.5rem; text-transform: uppercase;">Contact Us</h1>
-            <p class="animate-slide-up delay-200" style="font-size: 1.4rem; font-weight: 300; max-width: 800px; margin: 2rem auto 0; color: rgba(255,255,255,0.9);">
+            <p class="animate-slide-up delay-200"
+                style="font-size: 1.4rem; font-weight: 300; max-width: 800px; margin: 2rem auto 0; color: rgba(255,255,255,0.9);">
                 We'd love to hear from you. Reach out with any questions or to partner with us.
             </p>
         </div>
@@ -96,36 +137,43 @@
     <section class="section-padding" style="position: relative; overflow: hidden;">
         <div class="bg-text">CONNECT</div>
         <div class="container split-section">
-            
+
             <div class="tilt-card animate-slide-up delay-100" style="padding: 3rem;">
                 <div class="tilt-content">
                     <h2 style="font-size: 2.5rem; color: var(--color-navy); margin-bottom: 1rem;">Get In Touch</h2>
-                    <p style="color: var(--color-text-light); margin-bottom: 3rem;">Have a question about a camp, wanting to start an Aspire club, or looking to partner with us? We'd love to hear from you.</p>
-                    
+                    <p style="color: var(--color-text-light); margin-bottom: 3rem;">Have a question about a camp,
+                        wanting to start an Aspire club, or looking to partner with us? We'd love to hear from you.</p>
+
                     <div style="margin-bottom: 2rem; display: flex; align-items: flex-start; gap: 1.5rem;">
-                        <i class="fa-solid fa-location-dot" style="color: var(--color-gold); font-size: 1.8rem; margin-top: 5px;"></i>
+                        <i class="fa-solid fa-location-dot"
+                            style="color: var(--color-gold); font-size: 1.8rem; margin-top: 5px;"></i>
                         <div>
-                            <h4 style="color: var(--color-navy); font-family: var(--font-body); font-size: 1.2rem;">Headquarters</h4>
+                            <h4 style="color: var(--color-navy); font-family: var(--font-body); font-size: 1.2rem;">
+                                Headquarters</h4>
                             <p style="color: var(--color-text-light);">123 Faith Lane<br>Dallas, TX 75001</p>
                         </div>
                     </div>
-                    
+
                     <div style="margin-bottom: 2rem; display: flex; align-items: flex-start; gap: 1.5rem;">
-                        <i class="fa-solid fa-phone" style="color: var(--color-gold); font-size: 1.8rem; margin-top: 5px;"></i>
+                        <i class="fa-solid fa-phone"
+                            style="color: var(--color-gold); font-size: 1.8rem; margin-top: 5px;"></i>
                         <div>
-                            <h4 style="color: var(--color-navy); font-family: var(--font-body); font-size: 1.2rem;">Phone</h4>
+                            <h4 style="color: var(--color-navy); font-family: var(--font-body); font-size: 1.2rem;">
+                                Phone</h4>
                             <p style="color: var(--color-text-light);">+1 (555) 123-4567</p>
                         </div>
                     </div>
-                    
+
                     <div style="margin-bottom: 2rem; display: flex; align-items: flex-start; gap: 1.5rem;">
-                        <i class="fa-solid fa-envelope" style="color: var(--color-gold); font-size: 1.8rem; margin-top: 5px;"></i>
+                        <i class="fa-solid fa-envelope"
+                            style="color: var(--color-gold); font-size: 1.8rem; margin-top: 5px;"></i>
                         <div>
-                            <h4 style="color: var(--color-navy); font-family: var(--font-body); font-size: 1.2rem;">Email</h4>
+                            <h4 style="color: var(--color-navy); font-family: var(--font-body); font-size: 1.2rem;">
+                                Email</h4>
                             <p style="color: var(--color-text-light);">info@icpfusa.org</p>
                         </div>
                     </div>
-                    
+
                     <div class="social-icons" style="margin-top: 3rem;">
                         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -137,7 +185,7 @@
             <div class="tilt-card animate-slide-up delay-200" style="padding: 3rem;">
                 <form action="#" method="POST" class="tilt-content">
                     <h3 style="font-size: 2rem; color: var(--color-navy); margin-bottom: 2rem;">Send a Message</h3>
-                    
+
                     <div class="form-group">
                         <label class="form-label">Full Name</label>
                         <input type="text" class="form-control" placeholder="Your Name" required>
@@ -171,12 +219,14 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.html" class="logo" style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--color-white);">
+                    <a href="index.html" class="logo"
+                        style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--color-white);">
                         <i class="fa-solid fa-fire-flame-curved"></i> ICPFSE 2026
                     </a>
-                    <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">Awakening a generation to live boldly for Christ through fellowship, leadership, and community.</p>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">Awakening a generation to live boldly for
+                        Christ through fellowship, leadership, and community.</p>
                 </div>
-                
+
                 <div>
                     <h4 class="footer-title">Quick Links</h4>
                     <ul class="footer-links">
@@ -186,7 +236,7 @@
                         <li><a href="blog.html">Blog</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="footer-title">Ministries</h4>
                     <ul class="footer-links">
@@ -196,7 +246,7 @@
                         <li><a href="awake-camp.html#medical">Medical Mission</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="footer-title">Support</h4>
                     <ul class="footer-links">
@@ -205,8 +255,9 @@
                     </ul>
                 </div>
             </div>
-            
-            <div style="text-align: center; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5);">
+
+            <div
+                style="text-align: center; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5);">
                 <p>&copy; 2026 ICPFSE 2026. All Rights Reserved.</p>
             </div>
         </div>
@@ -214,4 +265,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

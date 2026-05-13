@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events | ICPFSE 2026</title>
     <meta name="description" content="Upcoming events, camps, and conferences for ICPFSE 2026.">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-header h1 {
+            color: var(--color-white) !important;
+        }
+
+        @media (max-width: 768px) {
+            .page-header-bg,
+            .hero-overlay {
+                display: block !important;
+                height: 100% !important;
+            }
+
+            .page-header h1,
+            .page-header p {
+                color: var(--color-white) !important;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
     <!-- Navigation -->
@@ -22,11 +44,11 @@
             <a href="index.html" class="logo">
                 <i class="fa-solid fa-fire-flame-curved"></i> ICPFSE 2026
             </a>
-            
+
             <button class="hamburger">
                 <i class="fa-solid fa-bars" style="color: var(--color-navy);"></i>
             </button>
-            
+
             <div class="nav-links">
                 <a href="index.html" class="nav-link">Home</a>
                 <div class="dropdown">
@@ -56,7 +78,7 @@
 
     <!-- Page Header -->
     <header class="page-header">
-        <div class="page-header-bg" style="background: url('https://picsum.photos/id/1025/1920/800') center/cover;"></div>
+        <div class="page-header-bg" style="background: url('upcomming_events.jpg') center/cover;"></div>
         <div class="hero-overlay"></div>
         <div class="container">
             <h1 class="animate-slide-up delay-100">Upcoming Events</h1>
@@ -71,19 +93,22 @@
         <div class="bg-text">GATHER</div>
         <div class="container">
             <div class="creative-cards-grid">
-                
+
                 <!-- Event 1 -->
                 <div class="tilt-card animate-slide-up delay-100" style="padding: 1.5rem;">
                     <div class="reveal-img-container tilt-content" style="height: 250px; margin-bottom: 1.5rem;">
-                        <img src="https://picsum.photos/id/1018/600/400" class="reveal-img" alt="Awake Summer Camp" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://picsum.photos/id/1018/600/400" class="reveal-img" alt="Awake Summer Camp"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="tilt-content">
-                        <div style="font-size: 0.9rem; color: var(--color-gold); font-weight: 600; margin-bottom: 1rem; display: flex; justify-content: space-between;">
+                        <div
+                            style="font-size: 0.9rem; color: var(--color-gold); font-weight: 600; margin-bottom: 1rem; display: flex; justify-content: space-between;">
                             <span><i class="fa-regular fa-calendar"></i> August 21-23, 2026</span>
                             <span><i class="fa-solid fa-location-dot"></i> Crandall, GA</span>
                         </div>
                         <h3 style="font-size: 1.8rem; color: var(--color-navy); margin-bottom: 1rem;">SE Awake Camp</h3>
-                        <p style="color: var(--color-text-light); margin-bottom: 2rem;">Join us for powerful worship, transformative teaching, and incredible fellowship at our annual SE Awake Camp.</p>
+                        <p style="color: var(--color-text-light); margin-bottom: 2rem;">Join us for powerful worship,
+                            transformative teaching, and incredible fellowship at our annual SE Awake Camp.</p>
                         <a href="registration.html" class="btn-outline btn" style="width: 100%;">Register Now</a>
                     </div>
                 </div>
@@ -91,15 +116,19 @@
                 <!-- Event 2 -->
                 <div class="tilt-card animate-slide-up delay-200" style="padding: 1.5rem;">
                     <div class="reveal-img-container tilt-content" style="height: 250px; margin-bottom: 1.5rem;">
-                        <img src="https://picsum.photos/id/1019/600/400" class="reveal-img" alt="Connect Conference" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://picsum.photos/id/1019/600/400" class="reveal-img" alt="Connect Conference"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="tilt-content">
-                        <div style="font-size: 0.9rem; color: var(--color-gold); font-weight: 600; margin-bottom: 1rem; display: flex; justify-content: space-between;">
+                        <div
+                            style="font-size: 0.9rem; color: var(--color-gold); font-weight: 600; margin-bottom: 1rem; display: flex; justify-content: space-between;">
                             <span><i class="fa-regular fa-calendar"></i> August 22, 2026</span>
                             <span><i class="fa-solid fa-location-dot"></i> Chicago, IL</span>
                         </div>
-                        <h3 style="font-size: 1.8rem; color: var(--color-navy); margin-bottom: 1rem;">Chicago Connect Conference</h3>
-                        <p style="color: var(--color-text-light); margin-bottom: 2rem;">A one-day equipping conference for students and leaders passionate about reaching their campuses for Christ.</p>
+                        <h3 style="font-size: 1.8rem; color: var(--color-navy); margin-bottom: 1rem;">Chicago Connect
+                            Conference</h3>
+                        <p style="color: var(--color-text-light); margin-bottom: 2rem;">A one-day equipping conference
+                            for students and leaders passionate about reaching their campuses for Christ.</p>
                         <a href="#" class="btn-outline btn" style="width: 100%;">Register Now</a>
                     </div>
                 </div>
@@ -107,15 +136,19 @@
                 <!-- Event 3 -->
                 <div class="tilt-card animate-slide-up delay-300" style="padding: 1.5rem;">
                     <div class="reveal-img-container tilt-content" style="height: 250px; margin-bottom: 1.5rem;">
-                        <img src="https://picsum.photos/id/1060/600/400" class="reveal-img" alt="Medical Mission Training" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://picsum.photos/id/1060/600/400" class="reveal-img"
+                            alt="Medical Mission Training" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="tilt-content">
-                        <div style="font-size: 0.9rem; color: var(--color-gold); font-weight: 600; margin-bottom: 1rem; display: flex; justify-content: space-between;">
+                        <div
+                            style="font-size: 0.9rem; color: var(--color-gold); font-weight: 600; margin-bottom: 1rem; display: flex; justify-content: space-between;">
                             <span><i class="fa-regular fa-calendar"></i> Sept 5-6, 2026</span>
                             <span><i class="fa-solid fa-location-dot"></i> Atlanta, GA</span>
                         </div>
-                        <h3 style="font-size: 1.8rem; color: var(--color-navy); margin-bottom: 1rem;">Medical Mission Prep</h3>
-                        <p style="color: var(--color-text-light); margin-bottom: 2rem;">Orientation and training weekend for all participants in the upcoming winter medical mission outreach.</p>
+                        <h3 style="font-size: 1.8rem; color: var(--color-navy); margin-bottom: 1rem;">Medical Mission
+                            Prep</h3>
+                        <p style="color: var(--color-text-light); margin-bottom: 2rem;">Orientation and training weekend
+                            for all participants in the upcoming winter medical mission outreach.</p>
                         <a href="#" class="btn-outline btn" style="width: 100%;">Learn More</a>
                     </div>
                 </div>
@@ -123,15 +156,20 @@
                 <!-- Event 4 -->
                 <div class="tilt-card animate-slide-up delay-100" style="padding: 1.5rem;">
                     <div class="reveal-img-container tilt-content" style="height: 250px; margin-bottom: 1.5rem;">
-                        <img src="https://picsum.photos/id/1074/600/400" class="reveal-img" alt="Leadership Retreat" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://picsum.photos/id/1074/600/400" class="reveal-img" alt="Leadership Retreat"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="tilt-content">
-                        <div style="font-size: 0.9rem; color: var(--color-gold); font-weight: 600; margin-bottom: 1rem; display: flex; justify-content: space-between;">
+                        <div
+                            style="font-size: 0.9rem; color: var(--color-gold); font-weight: 600; margin-bottom: 1rem; display: flex; justify-content: space-between;">
                             <span><i class="fa-regular fa-calendar"></i> Oct 10-12, 2026</span>
                             <span><i class="fa-solid fa-location-dot"></i> Orlando, FL</span>
                         </div>
-                        <h3 style="font-size: 1.8rem; color: var(--color-navy); margin-bottom: 1rem;">National Leadership Retreat</h3>
-                        <p style="color: var(--color-text-light); margin-bottom: 2rem;">Gathering chapter leaders from across the nation for a time of vision, rest, and strategic planning for the upcoming year.</p>
+                        <h3 style="font-size: 1.8rem; color: var(--color-navy); margin-bottom: 1rem;">National
+                            Leadership Retreat</h3>
+                        <p style="color: var(--color-text-light); margin-bottom: 2rem;">Gathering chapter leaders from
+                            across the nation for a time of vision, rest, and strategic planning for the upcoming year.
+                        </p>
                         <a href="#" class="btn-outline btn" style="width: 100%;">Register Now</a>
                     </div>
                 </div>
@@ -145,12 +183,14 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.html" class="logo" style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--color-white);">
+                    <a href="index.html" class="logo"
+                        style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--color-white);">
                         <i class="fa-solid fa-fire-flame-curved"></i> ICPFSE 2026
                     </a>
-                    <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">Awakening a generation to live boldly for Christ through fellowship, leadership, and community.</p>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">Awakening a generation to live boldly for
+                        Christ through fellowship, leadership, and community.</p>
                 </div>
-                
+
                 <div>
                     <h4 class="footer-title">Quick Links</h4>
                     <ul class="footer-links">
@@ -160,7 +200,7 @@
                         <li><a href="blog.html">Blog</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="footer-title">Ministries</h4>
                     <ul class="footer-links">
@@ -170,7 +210,7 @@
                         <li><a href="awake-camp.html#medical">Medical Mission</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="footer-title">Support</h4>
                     <ul class="footer-links">
@@ -179,8 +219,9 @@
                     </ul>
                 </div>
             </div>
-            
-            <div style="text-align: center; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5);">
+
+            <div
+                style="text-align: center; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5);">
                 <p>&copy; 2026 ICPFSE 2026. All Rights Reserved.</p>
             </div>
         </div>
@@ -188,4 +229,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
