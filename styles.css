@@ -526,7 +526,11 @@ ul {
 }
 
 .tilt-content {
-  transform: translateZ(30px);
+  transform: translateZ(30px) scale(1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  text-shadow: 0 0 1px rgba(10, 28, 58, 0.1);
 }
 
 /* Hero Section */
@@ -538,6 +542,7 @@ ul {
   justify-content: center;
   text-align: center;
   padding-top: 5rem;
+  padding-bottom: 4rem;
 }
 
 .hero-img-wrapper {
@@ -615,6 +620,7 @@ ul {
   justify-content: center;
   text-align: center;
   padding-top: 8rem;
+  padding-bottom: 4rem;
   /* Clears fixed navbar */
   color: var(--color-white);
   overflow: hidden;
@@ -1035,21 +1041,29 @@ ul {
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15); /* slightly more opaque */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 0.6rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.4); /* slightly more visible border */
+  padding: 0.8rem 1.8rem; /* slightly more padding */
   border-radius: 50px;
-  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
   font-family: var(--font-body);
-  font-weight: 600;
+  font-weight: 700; /* bold text */
   color: var(--color-white);
   letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 0.85rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(201, 168, 76, 0.2); /* added glow */
   animation: floatUpBadge 3s ease-in-out infinite alternate;
+  max-width: 90vw; /* prevent overflow on mobile */
+  text-align: left;
+}
+
+.hero-badge-creative span {
+  display: block;
+  line-height: 1.4;
 }
 
 @keyframes floatUpBadge {
@@ -1356,11 +1370,13 @@ body.menu-open html {
 
   .hero {
     padding-top: 8rem;
+    padding-bottom: 3rem;
   }
 
   .page-header {
     min-height: 40vh;
     padding-top: 6rem;
+    padding-bottom: 3rem;
   }
 
   .registration-form-container {
@@ -1421,7 +1437,10 @@ body.menu-open html {
 
   .hero-badge-creative {
     font-size: 0.75rem;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 20px; /* Adjust radius for multiline */
+    text-align: center;
+    max-width: 95vw;
   }
 
   .stats-container h3 {
@@ -1435,4 +1454,158 @@ body.menu-open html {
     /* Smaller padding for narrow phones */
   }
 
+}
+
+/* Text-based Team List Grid - Modern & Creative Layout */
+.team-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+  padding: 0 1rem;
+}
+
+.team-list-item {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 10px 30px rgba(10, 28, 58, 0.05);
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  /* Premium touch: subtle gold gradient overlay */
+  background-image: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(201, 168, 76, 0.05) 100%);
+}
+
+/* Decorative background abstract circle */
+.team-list-item::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 120px;
+  height: 120px;
+  background: var(--color-gold);
+  border-radius: 50%;
+  opacity: 0.05;
+  transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: -1;
+}
+
+/* Background sweep fill for hover */
+.team-list-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: var(--color-navy);
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: -2;
+}
+
+.team-list-item:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(10, 28, 58, 0.2);
+  border-color: transparent;
+}
+
+.team-list-item:hover::before {
+  transform: scale(6);
+  opacity: 1;
+  background: var(--color-navy);
+}
+
+.team-list-item:hover::after {
+  height: 100%;
+}
+
+.team-list-role {
+  color: var(--color-gold);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+  transition: color 0.4s ease;
+  position: relative;
+  display: inline-block;
+}
+
+/* Little accent line under the role */
+.team-list-role::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: var(--color-navy);
+  margin-top: 0.5rem;
+  transition: all 0.4s ease;
+  opacity: 0.3;
+}
+
+.team-list-item:hover .team-list-role::after {
+  width: 50px;
+  background: var(--color-gold);
+  opacity: 1;
+}
+
+.team-list-name {
+  font-size: 1.6rem;
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.team-list-item:hover .team-list-name {
+  color: var(--color-white);
+  transform: translateX(5px);
+}
+
+/* Special treatment for top leadership (first 3 cards) */
+.team-list-item:nth-child(-n+3) {
+  border: 1px solid rgba(201, 168, 76, 0.4);
+  background-image: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(201, 168, 76, 0.1) 100%);
+}
+.team-list-item:nth-child(-n+3) .team-list-role::after {
+  background: var(--color-gold);
+  opacity: 0.8;
+}
+
+/* Responsive adjustments for team grid */
+@media (max-width: 768px) {
+  .team-list-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 0;
+  }
+  .team-list-item {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-list-grid {
+    grid-template-columns: 1fr;
+  }
+  .team-list-name {
+    font-size: 1.3rem;
+  }
+  .team-list-role {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+  .team-list-item {
+    padding: 1.5rem;
+  }
 }

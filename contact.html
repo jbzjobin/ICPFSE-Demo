@@ -112,8 +112,8 @@
                         <a href="partner-churches.html" class="dropdown-item">Partner Churches</a>
                     </div>
                 </div>
-                <a href="events.html" class="nav-link">Events</a>
-                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="events.html" class="nav-link" style="display: none;">Events</a>
+                <a href="blog.html" class="nav-link" style="display: none;">Blog</a>
                 <a href="contact.html" class="nav-link active">Contact Us</a>
                 <a href="give.html" class="btn nav-give-btn">Give</a>
             </div>
@@ -144,25 +144,6 @@
                     <p style="color: var(--color-text-light); margin-bottom: 3rem;">Have a question about a camp,
                         wanting to start an Aspire club, or looking to partner with us? We'd love to hear from you.</p>
 
-                    <div style="margin-bottom: 2rem; display: flex; align-items: flex-start; gap: 1.5rem;">
-                        <i class="fa-solid fa-location-dot"
-                            style="color: var(--color-gold); font-size: 1.8rem; margin-top: 5px;"></i>
-                        <div>
-                            <h4 style="color: var(--color-navy); font-family: var(--font-body); font-size: 1.2rem;">
-                                Headquarters</h4>
-                            <p style="color: var(--color-text-light);">123 Faith Lane<br>Dallas, TX 75001</p>
-                        </div>
-                    </div>
-
-                    <div style="margin-bottom: 2rem; display: flex; align-items: flex-start; gap: 1.5rem;">
-                        <i class="fa-solid fa-phone"
-                            style="color: var(--color-gold); font-size: 1.8rem; margin-top: 5px;"></i>
-                        <div>
-                            <h4 style="color: var(--color-navy); font-family: var(--font-body); font-size: 1.2rem;">
-                                Phone</h4>
-                            <p style="color: var(--color-text-light);">+1 (555) 123-4567</p>
-                        </div>
-                    </div>
 
                     <div style="margin-bottom: 2rem; display: flex; align-items: flex-start; gap: 1.5rem;">
                         <i class="fa-solid fa-envelope"
@@ -170,33 +151,35 @@
                         <div>
                             <h4 style="color: var(--color-navy); font-family: var(--font-body); font-size: 1.2rem;">
                                 Email</h4>
-                            <p style="color: var(--color-text-light);">info@icpfusa.org</p>
+                            <p style="color: var(--color-text-light);">icpfse@gmail.com</p>
                         </div>
                     </div>
 
                     <div class="social-icons" style="margin-top: 3rem;">
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/icpf.southeast" target="_blank"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/icpfse/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
 
             <div class="tilt-card animate-slide-up delay-200" style="padding: 3rem;">
-                <form action="#" method="POST" class="tilt-content">
+                <form id="contact-form" class="tilt-content">
                     <h3 style="font-size: 2rem; color: var(--color-navy); margin-bottom: 2rem;">Send a Message</h3>
 
                     <div class="form-group">
                         <label class="form-label">Full Name</label>
-                        <input type="text" class="form-control" placeholder="Your Name" required>
+                        <input type="text" id="contact-name" class="form-control" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Email Address</label>
-                        <input type="email" class="form-control" placeholder="your@email.com" required>
+                        <input type="email" id="contact-email" class="form-control" placeholder="your@email.com"
+                            required>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Subject</label>
-                        <select class="form-control">
+                        <select id="contact-subject" class="form-control">
                             <option>General Inquiry</option>
                             <option>Camps & Events</option>
                             <option>Start an Aspire Club</option>
@@ -205,9 +188,13 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label">Message</label>
-                        <textarea class="form-control" rows="5" placeholder="How can we help you?" required></textarea>
+                        <textarea id="contact-message" class="form-control" rows="5" placeholder="How can we help you?"
+                            required></textarea>
                     </div>
                     <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                    <div id="form-status"
+                        style="margin-top: 1.5rem; text-align: center; font-weight: 500; font-size: 0.95rem; display: none; line-height: 1.4;">
+                    </div>
                 </form>
             </div>
 
@@ -232,8 +219,8 @@
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li style="display: none;"><a href="events.html">Events</a></li>
+                        <li style="display: none;"><a href="blog.html">Blog</a></li>
                     </ul>
                 </div>
 
@@ -264,6 +251,79 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('contact-name').value;
+            const email = document.getElementById('contact-email').value;
+            const subject = document.getElementById('contact-subject').value;
+            const message = document.getElementById('contact-message').value;
+
+            const statusDiv = document.getElementById('form-status');
+
+            // --- BACKGROUND EMAILS CONFIGURATION ---
+            // If you want background submissions, visit https://web3forms.com to get a free Access Key,
+            // then paste it inside the quotes below (e.g. 'YOUR-ACCESS-KEY-HERE').
+            const web3formsAccessKey = 'dc761370-f549-41c5-a254-5f7e792eb6f8';
+            // ---------------------------------------
+
+            statusDiv.style.display = 'block';
+            statusDiv.style.color = 'var(--color-navy)';
+
+            if (web3formsAccessKey && web3formsAccessKey !== 'YOUR-ACCESS-KEY-HERE') {
+                // Background submission using Web3Forms
+                statusDiv.innerHTML = '<i class="fa-solid fa-spinner fa-spin" style="color: var(--color-gold); margin-right: 8px;"></i> Sending message...';
+
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        access_key: web3formsAccessKey,
+                        name: name,
+                        email: email,
+                        subject: subject,
+                        message: message
+                    })
+                })
+                    .then(async (response) => {
+                        let json = await response.json();
+                        if (response.status == 200) {
+                            statusDiv.style.color = '#10B981'; // Green
+                            statusDiv.innerHTML = '<i class="fa-solid fa-circle-check" style="margin-right: 8px;"></i> Message sent successfully!';
+                            document.getElementById('contact-form').reset();
+                        } else {
+                            console.log(response);
+                            statusDiv.style.color = '#EF4444'; // Red
+                            statusDiv.innerHTML = `<i class="fa-solid fa-circle-xmark" style="margin-right: 8px;"></i> ${json.message || "Something went wrong. Please try again."}`;
+                        }
+                    })
+                    .catch(error => {
+                        console.log(error);
+                        statusDiv.style.color = '#EF4444'; // Red
+                        statusDiv.innerHTML = '<i class="fa-solid fa-circle-xmark" style="margin-right: 8px;"></i> Network error. Please try again later.';
+                    });
+
+            } else {
+                // Fallback client-side mailto redirect
+                statusDiv.innerHTML = '<i class="fa-solid fa-spinner fa-spin" style="color: var(--color-gold); margin-right: 8px;"></i> Opening your email client...';
+
+                const recipient = 'icpfse@gmail.com';
+                const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+                const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject + ' - ' + name)}&body=${encodeURIComponent(body)}`;
+
+                window.location.href = mailtoLink;
+
+                setTimeout(() => {
+                    statusDiv.style.color = '#10B981'; // Green
+                    statusDiv.innerHTML = '<i class="fa-solid fa-circle-check" style="margin-right: 8px;"></i> Email client opened! If nothing happened, you can email us directly at <a href="mailto:icpfse@gmail.com" style="color: var(--color-gold); text-decoration: underline;">icpfse@gmail.com</a>';
+                }, 1500);
+            }
+        });
+    </script>
 </body>
 
 </html>

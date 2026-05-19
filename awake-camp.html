@@ -41,6 +41,24 @@
             color: white;
             text-align: center;
         }
+
+        @media (max-width: 768px) {
+            .theme-section h2 {
+                font-size: 12vw !important;
+                letter-spacing: 2px !important;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                display: flex;
+                gap: 1rem;
+            }
+
+            .hero-buttons .btn {
+                margin-left: 0 !important;
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -76,8 +94,8 @@
                         <a href="partner-churches.html" class="dropdown-item">Partner Churches</a>
                     </div>
                 </div>
-                <a href="events.html" class="nav-link">Events</a>
-                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="events.html" class="nav-link" style="display: none;">Events</a>
+                <a href="blog.html" class="nav-link" style="display: none;">Blog</a>
                 <a href="contact.html" class="nav-link">Contact Us</a>
                 <a href="give.html" class="nav-link">Give</a>
             </div>
@@ -101,10 +119,9 @@
                 style="font-size: 1.4rem; font-weight: 300; max-width: 800px; margin: 2rem auto 0; color: rgba(255,255,255,0.9);">
                 Igniting faith and building unshakable foundations for the next generation of Christian leaders.
             </p>
-            <div class="animate-slide-up delay-300" style="margin-top: 3rem;">
+            <div class="animate-slide-up delay-300 hero-buttons" style="margin-top: 3rem;">
                 <a href="registration.html" class="btn">Register Today</a>
-                <a href="#overview" class="btn-outline btn"
-                    style="margin-left: 1.5rem; color: white; border-color: white;">Learn More</a>
+                <a href="#overview" class="btn-outline btn" style="color: white; border-color: white;">Learn More</a>
             </div>
         </div>
     </header>
@@ -150,11 +167,11 @@
                     <p>Powerful Days</p>
                 </div>
                 <div class="stat-box text-center">
-                    <h3>500+</h3>
+                    <h3>300+</h3>
                     <p>Attendees</p>
                 </div>
                 <div class="stat-box text-center">
-                    <h3>10+</h3>
+                    <h3>5+</h3>
                     <p>Workshops</p>
                 </div>
                 <div class="stat-box text-center">
@@ -215,8 +232,8 @@
                     <ul class="footer-links">
                         <li><a href="about.html">Our Story</a></li>
                         <li><a href="leadership.html#leadership-team">Leadership</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li style="display: none;"><a href="events.html">Events</a></li>
+                        <li style="display: none;"><a href="blog.html">Blog</a></li>
                     </ul>
                 </div>
                 <div>

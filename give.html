@@ -94,6 +94,226 @@
             .page-header p {
                 color: var(--color-white) !important;
             }
+
+            .donation-box {
+                padding: 2rem 1.25rem !important;
+                margin: -60px auto 3rem !important;
+                width: calc(100% - 2rem) !important;
+            }
+
+            .donation-box .btn {
+                padding: 0.8rem 1rem !important;
+                font-size: 0.85rem !important;
+                letter-spacing: 1px !important;
+            }
+
+            .amount-grid {
+                gap: 0.5rem !important;
+                margin-bottom: 1rem !important;
+            }
+
+            .amount-btn {
+                padding: 0.75rem 0.25rem !important;
+                font-size: 0.85rem !important;
+            }
+
+            .custom-amount {
+                padding: 0.8rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .modal-content {
+                padding: 1.75rem 1.25rem !important;
+            }
+            .giving-method {
+                padding: 0.8rem 0.75rem !important;
+            }
+            .method-icon {
+                width: 36px !important;
+                height: 36px !important;
+                font-size: 1.1rem !important;
+                margin-right: 0.75rem !important;
+            }
+            .method-val {
+                font-size: 0.8rem !important;
+            }
+        }
+
+        /* Giving Options Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 28, 58, 0.4);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-content {
+            background: rgba(255, 255, 255, 0.98);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 24px;
+            padding: 2.5rem;
+            max-width: 480px;
+            width: 90%;
+            box-shadow: 0 30px 60px rgba(10, 28, 58, 0.2);
+            position: relative;
+            transform: scale(0.9);
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.25rem;
+            right: 1.25rem;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--color-text-light);
+            cursor: pointer;
+            line-height: 1;
+            transition: color 0.2s;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .modal-close:hover {
+            color: var(--color-navy);
+            background: rgba(10, 28, 58, 0.05);
+        }
+
+        .modal-content h3 {
+            color: var(--color-navy);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .modal-content p {
+            color: var(--color-text-light);
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .giving-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .giving-method {
+            display: flex;
+            align-items: center;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 1rem 1.2rem;
+            transition: all 0.2s ease;
+        }
+
+        .giving-method:hover {
+            border-color: var(--color-gold);
+            background: #fff;
+            box-shadow: 0 8px 20px rgba(10, 28, 58, 0.05);
+        }
+
+        .method-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .zelle-bg {
+            background: rgba(116, 20, 202, 0.1);
+            color: #7414CA;
+            font-weight: 800;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .venmo-bg {
+            background: rgba(0, 140, 255, 0.1);
+            color: #008CFF;
+            font-weight: 800;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .paypal-bg {
+            background: rgba(0, 48, 135, 0.1);
+            color: #003087;
+        }
+
+        .method-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .method-name {
+            font-weight: 700;
+            color: var(--color-navy);
+            font-size: 1rem;
+        }
+
+        .method-val {
+            color: var(--color-text-light);
+            font-size: 0.9rem;
+            margin-top: 0.1rem;
+            word-break: break-all;
+            user-select: all;
+        }
+
+        .copy-btn {
+            background: none;
+            border: none;
+            color: var(--color-text-light);
+            cursor: pointer;
+            font-size: 1.1rem;
+            padding: 0.5rem;
+            border-radius: 8px;
+            transition: all 0.2s;
+            flex-shrink: 0;
+            margin-left: 0.5rem;
+        }
+
+        .copy-btn:hover {
+            color: var(--color-gold);
+            background: rgba(201, 168, 76, 0.1);
+        }
+
+        .copy-btn.copied {
+            color: #10B981;
         }
     </style>
 </head>
@@ -130,8 +350,8 @@
                         <a href="partner-churches.html" class="dropdown-item">Partner Churches</a>
                     </div>
                 </div>
-                <a href="events.html" class="nav-link">Events</a>
-                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="events.html" class="nav-link" style="display: none;">Events</a>
+                <a href="blog.html" class="nav-link" style="display: none;">Blog</a>
                 <a href="contact.html" class="nav-link">Contact Us</a>
                 <a href="give.html" class="btn nav-give-btn">Give</a>
             </div>
@@ -155,7 +375,7 @@
     </header>
 
     <!-- Donation Section -->
-    <section style="position: relative; overflow: hidden; padding-bottom: 8rem;">
+    <section style="position: relative; overflow: visible; padding-bottom: 8rem;">
         <div class="bg-text">SUPPORT</div>
         <div class="container">
             <div class="donation-box animate-slide-up delay-300">
@@ -163,8 +383,8 @@
                     Secure Donation</h3>
 
                 <div style="display: flex; gap: 1rem; margin-bottom: 2.5rem;">
-                    <button class="btn" style="flex: 1; text-align: center;">One-Time</button>
-                    <button class="btn-outline btn" style="flex: 1; text-align: center;">Monthly</button>
+                    <button id="btn-one-time" class="btn" style="flex: 1; text-align: center;">One-Time</button>
+                    <button id="btn-monthly" class="btn-outline btn" style="flex: 1; text-align: center;">Monthly</button>
                 </div>
 
                 <div class="amount-grid">
@@ -178,7 +398,7 @@
 
                 <input type="text" class="custom-amount" placeholder="Enter custom amount ($)" style="display: none;">
 
-                <button class="btn" style="width: 100%; font-size: 1.2rem; padding: 1.2rem;">Donate Now</button>
+                <button class="btn" id="donate-btn" style="width: 100%; font-size: 1.2rem; padding: 1.2rem;">Donate Now</button>
 
                 <p style="text-align: center; font-size: 0.9rem; color: var(--color-text-light); margin-top: 2rem;">
                     <i class="fa-solid fa-lock" style="color: var(--color-gold);"></i> Secure SSL Transaction. ICPFSE
@@ -194,7 +414,7 @@
                     <h3 class="tilt-content" style="font-size: 1.5rem; color: var(--color-navy); margin-bottom: 1rem;">
                         Give by Mail</h3>
                     <p class="tilt-content" style="color: var(--color-text-light); font-size: 1rem;">Make checks payable
-                        to "ICPFSE 2026" and mail to:<br>123 Faith Lane, Dallas, TX 75001</p>
+                        to "ICPFSE 2026" and mail to:<br>2265 Cassidy Road, Cumming, GA 30041</p>
                 </div>
                 <div class="tilt-card text-center" style="padding: 2.5rem;">
                     <i class="fa-solid fa-building-columns tilt-content"
@@ -217,6 +437,65 @@
         </div>
     </section>
 
+    <!-- Giving Options Modal -->
+    <div id="giving-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+            <h3>Giving Options</h3>
+            <p>Choose your preferred payment method below to complete your secure donation to ICPF USA.</p>
+            <div class="giving-methods">
+                <div class="giving-method" style="flex-direction: column; align-items: stretch; gap: 0.75rem;">
+                    <div style="display: flex; align-items: center; width: 100%;">
+                        <div class="method-icon zelle-bg">Z</div>
+                        <div class="method-details">
+                            <span class="method-name">Zelle</span>
+                            <span class="method-val" id="zelle-val">giving@icpfusa.org</span>
+                        </div>
+                        <button class="copy-btn" data-target="zelle-val" title="Copy to clipboard" style="margin-left: auto;">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                    </div>
+                    <a href="https://www.zellepay.com/go" id="zelle-donate-link" target="_blank" class="btn" style="width: 100% !important; padding: 0.8rem 1rem !important; font-size: 0.9rem !important; border-radius: 50px !important; text-align: center !important; margin-top: 0.2rem !important; display: block !important; box-sizing: border-box !important; background: #7414CA !important; border-color: #7414CA !important; color: #fff !important; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">
+                        <i class="fa-solid fa-building-columns" style="margin-right: 8px;"></i> Send via Zelle
+                    </a>
+                </div>
+                <div class="giving-method" style="flex-direction: column; align-items: stretch; gap: 0.75rem;">
+                    <div style="display: flex; align-items: center; width: 100%;">
+                        <div class="method-icon venmo-bg">V</div>
+                        <div class="method-details">
+                            <span class="method-name">Venmo</span>
+                            <span class="method-val" id="venmo-val">ICPF-USA</span>
+                        </div>
+                        <button class="copy-btn" data-target="venmo-val" title="Copy to clipboard" style="margin-left: auto;">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                    </div>
+                    <a href="#" id="venmo-donate-link" target="_blank" class="btn" style="width: 100% !important; padding: 0.8rem 1rem !important; font-size: 0.9rem !important; border-radius: 50px !important; text-align: center !important; margin-top: 0.2rem !important; display: block !important; box-sizing: border-box !important; background: #008CFF !important; border-color: #008CFF !important; color: #fff !important; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">
+                        <i class="fa-brands fa-venmo" style="margin-right: 8px;"></i> Pay with Venmo
+                    </a>
+                </div>
+                <div class="giving-method" style="flex-direction: column; align-items: stretch; gap: 0.75rem;">
+                    <div style="display: flex; align-items: center; width: 100%;">
+                        <div class="method-icon paypal-bg">
+                            <i class="fa-brands fa-paypal"></i>
+                        </div>
+                        <div class="method-details">
+                            <span class="method-name">PayPal / Credit Card</span>
+                            <span class="method-val" id="paypal-val">icpfusa@gmail.com</span>
+                        </div>
+                        <button class="copy-btn" data-target="paypal-val" title="Copy to clipboard" style="margin-left: auto;">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                    </div>
+                    <a href="#" id="paypal-donate-link" target="_blank" class="btn" style="width: 100% !important; padding: 0.8rem 1rem !important; font-size: 0.9rem !important; border-radius: 50px !important; text-align: center !important; margin-top: 0.2rem !important; display: block !important; box-sizing: border-box !important;">
+                        <i class="fa-brands fa-paypal" style="margin-right: 8px;"></i> Pay Now
+                    </a>
+                </div>
+            </div>
+            <p id="recurring-note" style="text-align: center; font-size: 0.85rem; color: var(--color-text-light); margin-top: 1.5rem; display: none; font-style: italic; line-height: 1.4;"></p>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -235,8 +514,8 @@
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li style="display: none;"><a href="events.html">Events</a></li>
+                        <li style="display: none;"><a href="blog.html">Blog</a></li>
                     </ul>
                 </div>
 
@@ -279,6 +558,130 @@
                 } else {
                     document.querySelector('.custom-amount').style.display = 'none';
                 }
+            });
+        });
+
+        // Toggle One-Time vs Monthly
+        let frequency = 'one-time';
+        const btnOneTime = document.getElementById('btn-one-time');
+        const btnMonthly = document.getElementById('btn-monthly');
+        
+        btnOneTime.addEventListener('click', function(e) {
+            e.preventDefault();
+            frequency = 'one-time';
+            btnOneTime.classList.remove('btn-outline');
+            btnMonthly.classList.add('btn-outline');
+        });
+        
+        btnMonthly.addEventListener('click', function(e) {
+            e.preventDefault();
+            frequency = 'monthly';
+            btnMonthly.classList.remove('btn-outline');
+            btnOneTime.classList.add('btn-outline');
+        });
+
+        // Modal Functionality
+        const donateBtn = document.getElementById('donate-btn');
+        const givingModal = document.getElementById('giving-modal');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+ 
+        donateBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Get selected amount
+            let amount = '';
+            const activeBtn = document.querySelector('.amount-btn.active');
+            if (activeBtn) {
+                if (activeBtn.innerText === 'Other') {
+                    amount = document.querySelector('.custom-amount').value.trim();
+                } else {
+                    amount = activeBtn.innerText.replace('$', '').replace(',', '');
+                }
+            }
+            
+            // Clean up the amount
+            amount = parseFloat(amount);
+            
+            const isMonthly = frequency === 'monthly';
+            const freqSuffixText = isMonthly ? ' Monthly' : '';
+            const recurringNote = document.getElementById('recurring-note');
+            
+            if (isMonthly) {
+                recurringNote.innerHTML = `<i class="fa-solid fa-circle-info" style="color: var(--color-gold); margin-right: 5px;"></i> Note: For Zelle and Venmo, please set up a repeating/recurring schedule directly within your bank or Venmo app.`;
+                recurringNote.style.display = 'block';
+            } else {
+                recurringNote.style.display = 'none';
+            }
+            
+            // Update Zelle Button Text
+            const zelleLink = document.getElementById('zelle-donate-link');
+            if (!isNaN(amount) && amount > 0) {
+                zelleLink.innerHTML = `<i class="fa-solid fa-building-columns" style="margin-right: 8px;"></i> Send $${amount}${freqSuffixText} via Zelle`;
+            } else {
+                zelleLink.innerHTML = `<i class="fa-solid fa-building-columns" style="margin-right: 8px;"></i> Open Zelle Bank Portal`;
+            }
+            
+            // Update Venmo Link
+            const venmoLink = document.getElementById('venmo-donate-link');
+            if (!isNaN(amount) && amount > 0) {
+                const venmoNote = isMonthly ? 'Monthly Donation to ICPF USA' : 'Donation to ICPF USA';
+                venmoLink.href = `https://account.venmo.com/pay?txn=pay&recipients=ICPF-USA&amount=${amount}&note=${encodeURIComponent(venmoNote)}`;
+                venmoLink.innerHTML = `<i class="fa-brands fa-venmo" style="margin-right: 8px;"></i> Pay $${amount}${freqSuffixText} on Venmo`;
+            } else {
+                venmoLink.href = `https://venmo.com/ICPF-USA`;
+                venmoLink.innerHTML = `<i class="fa-brands fa-venmo" style="margin-right: 8px;"></i> Open Venmo Profile`;
+            }
+            
+            // Update PayPal Link
+            const paypalLink = document.getElementById('paypal-donate-link');
+            if (!isNaN(amount) && amount > 0) {
+                if (isMonthly) {
+                    paypalLink.href = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick-subscriptions&business=icpfusa@gmail.com&currency_code=USD&a3=${amount}&p3=1&t3=M&src=1&item_name=Monthly+Donation+to+ICPF+USA`;
+                    paypalLink.innerHTML = `<i class="fa-brands fa-paypal" style="margin-right: 8px;"></i> Subscribe $${amount}/Month`;
+                } else {
+                    paypalLink.href = `https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=icpfusa@gmail.com&currency_code=USD&amount=${amount}&item_name=Donation+to+ICPF+USA`;
+                    paypalLink.innerHTML = `<i class="fa-brands fa-paypal" style="margin-right: 8px;"></i> Pay $${amount} Now`;
+                }
+            } else {
+                paypalLink.href = `https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=icpfusa@gmail.com&currency_code=USD&item_name=Donation+to+ICPF+USA`;
+                paypalLink.innerHTML = `<i class="fa-brands fa-paypal" style="margin-right: 8px;"></i> Pay Online Now`;
+            }
+            
+            givingModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Disable scroll under modal
+        });
+
+        const closeModal = () => {
+            givingModal.classList.remove('active');
+            document.body.style.overflow = ''; // Re-enable scroll
+        };
+
+        modalCloseBtn.addEventListener('click', closeModal);
+        givingModal.addEventListener('click', function(e) {
+            if (e.target === givingModal) {
+                closeModal();
+            }
+        });
+
+        // Copy to clipboard functionality
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const textToCopy = document.getElementById(targetId).textContent;
+                
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    // Visual feedback
+                    const icon = this.querySelector('i');
+                    icon.className = 'fa-solid fa-check';
+                    this.classList.add('copied');
+                    
+                    setTimeout(() => {
+                        icon.className = 'fa-regular fa-copy';
+                        this.classList.remove('copied');
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy text: ', err);
+                });
             });
         });
     </script>
